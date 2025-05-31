@@ -2,20 +2,20 @@ package com.example.JinuBoard.entity;
 
 public class Enum {
     public enum Category {
-        FEATURE_REQUEST,
-        BUG_REPORT,
-        ETC
+        feature_request,
+        bug_report,
+        etc
     }
 
     public enum Status {
-        WAITING,
-        CONFIRMED,
-        IN_PROGRESS,
-        DONE
+        waiting,
+        confirmed,
+        in_progress,
+        done
     }
 
     public enum Role {
-        ADMIN,
-        USER
+        admin,
+        user
     }
 }

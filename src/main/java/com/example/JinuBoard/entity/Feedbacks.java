@@ -37,18 +37,18 @@ public class Feedbacks {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")  // 작성자
-    @Column(nullable = false)
     private Users userId;
 
     @Builder
-    public Feedbacks(String title, String content, Enum.Category category, Enum.Status status, Boolean isAnonymous, Users userId) {
+    public Feedbacks(String title, String content, Enum.Category category, Enum.Status status,
+                     Boolean isAnonymous, Users userId, LocalDateTime createdAt) {
         this.title = title;
         this.content = content;
         this.category = category;
         this.status = status;
         this.isAnonymous = isAnonymous;
         this.userId = userId;
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = createdAt;
         this.updatedAt = LocalDateTime.now();
     }
 }
